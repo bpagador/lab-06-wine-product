@@ -63,7 +63,7 @@ const sauvBlanc = {
     price: 11.00,
 };
 
-const wines = {
+const wines = [
     beaujolais,
     cabSauv,
     nebbiolo,
@@ -72,6 +72,6 @@ const wines = {
     pinotGrigio,
     riesling,
     sauvBlanc,
-};
+];
 
 export default wines;
