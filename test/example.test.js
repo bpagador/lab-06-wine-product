@@ -2,6 +2,7 @@
 // import example from '../src/example.js';
 import wines from '../data/wines.js';
 import { findById } from '../common/utils.js';
+import { calcLineTotal } from '../common/utils.js';
 
 const test = QUnit.test;
 
@@ -27,5 +28,16 @@ test('find product by id', assert => {
     const foundWine = findById(wines, id);
 
     assert.equal(foundWine, expected);
+
+});
+
+test('calculate line item total', assert => {
+    const quantity = 2;
+    const price = 3.05;
+    const expected = 6.10;
+
+    const lineTotal = calcLineTotal(quantity, price);
+
+    assert.equal(lineTotal, expected);
 
 });
