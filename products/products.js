@@ -1,5 +1,5 @@
-import wines from '../data/fruits.js';
-import renderWines from './render-fruit.js';
+import wines from '../data/wines.js';
+import renderWines from './render-wines.js';
 
 const list = document.getElementById('wines');
 
