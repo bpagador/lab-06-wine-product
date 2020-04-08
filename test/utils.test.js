@@ -1,8 +1,11 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 import wines from '../data/wines.js';
+import cart from '../data/cart.js';
 import { findById } from '../common/utils.js';
 import { calcLineTotal } from '../common/utils.js';
+import { calcOrderTotal } from '../common/utils.js';
+
 
 const test = QUnit.test;
 
@@ -39,5 +42,14 @@ test('calculate line item total', assert => {
     const lineTotal = calcLineTotal(quantity, price);
 
     assert.equal(lineTotal, expected);
+
+});
+
+test('calculate order total', assert => {
+    const expected = 157 ;
+
+    const orderTotal = calcOrderTotal(cart, wines);
+
+    assert.equal(orderTotal, expected);
 
 });
