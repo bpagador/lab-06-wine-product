@@ -1,7 +1,6 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 import wines from '../data/wines.js';
-import cart from '../data/cart.js';
 import { findById } from '../common/utils.js';
 import { calcLineTotal } from '../common/utils.js';
 import { calcOrderTotal } from '../common/utils.js';
@@ -46,7 +45,9 @@ test('calculate line item total', assert => {
 });
 
 test('calculate order total', assert => {
-    const expected = 157 ;
+    const expected = 76 ;
+    const cart = [{ id: 'beaujolais', quantity: 2 }, { id: 'nebbiolo', quantity: 2 }];
+
 
     const orderTotal = calcOrderTotal(cart, wines);
 

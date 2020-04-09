@@ -1,3 +1,6 @@
+import { findById } from '../common/utils.js';
+import { toUSD } from '../common/utils.js';
+
 function renderWines(wines) {
     const li = document.createElement('li');
     li.className = wines.category;
@@ -14,13 +17,42 @@ function renderWines(wines) {
 
     const p = document.createElement('p');
     p.className = 'price';
-
-    const usd = '$' + wines.price;
-    p.textContent = usd;
+    p.textContent = toUSD(wines.price);
     
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = wines.code;
+    button.value = wines.id;
+    button.addEventListener('click', () => {
+        let json = localStorage.getItem('CART');
+        if (json) {
+            json = JSON.parse(json);   
+        } else {
+            json = [];
+
+        }
+
+        let wineItem = findById(json, wines.id);
+
+        if (!wineItem) {
+            wineItem = {
+                id: wines.id,
+                quantity: 1
+            };
+
+            json.push(wineItem);
+        } else {
+            wineItem.quantity++;
+        }
+
+        json = JSON.stringify(json);
+        localStorage.setItem('CART', json);
+
+        alert('1 ' + wines.name + ' added to cart!');
+
+    });
+
+
+
     p.appendChild(button);
 
     li.appendChild(p);
