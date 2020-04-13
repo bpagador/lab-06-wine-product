@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotu';
+    background-image: url(../assets/wine-hand.jpg);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    display: wrap;
+    margin: 0;
+}
+
+header {
+    color: rgb(247, 70, 99);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250, 196, 196);
+    height: 200px; 
+    background-image: url(../assets/wine-hand.jpg);
+    background-repeat: no-repeat;
+    padding: 8px
+}
+
+
+
+

@@ -1,0 +1,23 @@
+table.left {
+    margin-left: 800px;
+    margin-right: auto;
+    border-color: olivedrab;
+    justify-content: space-evenly;
+    text-align: center;
+    border-style: dashed;
+    margin-top: 50px;
+}
+button {
+    background-color: forestgreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 800px;
+}
+
+p.return {
+    margin-left: 800px;
+}
+
