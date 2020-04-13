@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../common/main.css">
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <main class="align-left">
+        <table class="left">
+            <thead>
+                <tr>
+                    <th>Wine</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tbody">
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Order Total:</th>
+                    <th id="total-amount"></th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p class="order-now-container">
+            <button id="place-order-button">Place Order</button>
+        </p>
+        <nav>
+            <p class="return">
+                <a href="../products/products-index.html">Return to Wine List</a>
+            </p>
+        </nav>
+       
+    </main>
+
+<script type="module" src="products.js"></script>
+<script type="module" src="shopping-cart.js"></script>
+</body>
+</html>
